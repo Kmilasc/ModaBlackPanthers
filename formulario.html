@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,7 @@
             flex-direction: column;
             min-height: 100vh;
         }
+
         header {
             background-color: #333;
             color: #fff;
@@ -22,14 +24,17 @@
             justify-content: space-between;
             align-items: center;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
             margin: 0 10px;
         }
+
         nav a:hover {
             text-decoration: underline;
         }
+
         footer {
             background-color: #333;
             color: #fff;
@@ -37,6 +42,7 @@
             padding: 10px 0;
             margin-top: auto;
         }
+
         form {
             width: 400px;
             padding: 20px;
@@ -47,14 +53,17 @@
             margin: 20px auto;
             margin-bottom: 50px;
         }
+
         h1 {
             text-align: center;
             margin-top: 30px;
         }
+
         label {
             display: block;
             margin-bottom: 5px;
         }
+
         input {
             width: 100%;
             padding: 5px;
@@ -62,6 +71,7 @@
             border: 1px solid #ccc;
             border-radius: 3px;
         }
+
         input[type="submit"] {
             background-color: #333;
             color: #fff;
@@ -70,11 +80,13 @@
             padding: 10px 20px;
             cursor: pointer;
         }
+
         input[type="submit"]:hover {
             background-color: #494949;
         }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Moda Black Panthers</h1>
@@ -85,9 +97,12 @@
         </nav>
     </header>
     <h1>Formulário de contato</h1>
-    <form id="contactForm" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dak00000476mP" method="POST">
+    <form id="contactForm"
+        action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dak00000476mP"
+        method="POST">
         <input type="hidden" name="oid" value="00Dak00000476mP">
-        <input type="hidden" name="retURL" value="https://www.vestis.com.br/?utm_source=GOOGLE&utm_medium=PESQUISA&utm_campaign=gads_pesquisa_sul&gad_source=1&gclid=Cj0KCQjw8J6wBhDXARIsAPo7QA9AdejLBuxno2LHhK3T2daWdnSUn3bqFFvLv9gnLH55_Y9OMlS3AO0aAu_nEALw_wcB">
+        <input type="hidden" name="retURL"
+            value="https://www.vestis.com.br/?utm_source=GOOGLE&utm_medium=PESQUISA&utm_campaign=gads_pesquisa_sul&gad_source=1&gclid=Cj0KCQjw8J6wBhDXARIsAPo7QA9AdejLBuxno2LHhK3T2daWdnSUn3bqFFvLv9gnLH55_Y9OMlS3AO0aAu_nEALw_wcB">
         <label for="first_name">Primeiro Nome</label>
         <input id="first_name" maxlength="40" name="first_name" size="20" type="text" required>
         <label for="last_name">Sobrenome</label>
@@ -102,7 +117,11 @@
         <input id="state" maxlength="20" name="state" size="20" type="text" required>
         <label for="00Nak000001LFEo">Motivo de contato</label>
         <input id="00Nak000001LFEo" maxlength="255" name="00Nak000001LFEo" size="20" type="text" required>
-        <input type="submit" name="submit">
+        <label for="lead_source" id="lead_source_label"></label>
+
+        <select id="lead_source" name="lead_source" hidden>
+            <option value="Web" selected>Web</option>
+            <input type="submit" name="submit">
     </form>
     <footer>
         <p>&copy; 2024 Moda Black Panthers. Todos os direitos reservados.</p>
@@ -110,7 +129,7 @@
     <script>
         const form = document.getElementById('contactForm');
 
-        form.addEventListener('submit', function(event) {
+        form.addEventListener('submit', function (event) {
             if (!form.checkValidity()) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -119,4 +138,5 @@
         });
     </script>
 </body>
+
 </html>
