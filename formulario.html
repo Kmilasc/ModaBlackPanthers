@@ -84,6 +84,10 @@
         input[type="submit"]:hover {
             background-color: #494949;
         }
+        select{
+            margin-bottom: 15px;
+            padding: 5px;
+        }
     </style>
 </head>
 
@@ -115,11 +119,16 @@
         <input id="state" maxlength="20" name="state" size="20" type="text" required>
         <label for="00Nak000001LFEo">Motivo de contato</label>
         <input id="00Nak000001LFEo" maxlength="255" name="00Nak000001LFEo" size="20" type="text" required>
-        <label for="lead_source" id="lead_source_label"></label>
+        <label for="lead_source">Origem do lead</label>
+        <select id="lead_source" name="lead_source">
+            <option value="">-- Nenhum --</option>
+            <option value="Site">Site</option>
+            <option value="Redes sociais">Redes sociais</option>
+            <option value="Lista adquirida">Lista adquirida</option>
+            <option value="Outros">Outros</option>
 
-        <select id="lead_source" name="lead_source" hidden>
-            <option value="Web" selected>Web</option>
-            <input type="submit" name="submit">
+        </select>
+        <input type="submit" name="submit">
     </form>
     <footer>
         <p>&copy; 2024 Moda Black Panthers. Todos os direitos reservados.</p>
